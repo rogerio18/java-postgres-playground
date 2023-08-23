@@ -7,8 +7,10 @@ public class Cliente{
     private char sexo;
     private int anoNascimento; 
     private boolean especial;   
+    private String cidade;
 
-    // um contrutor é so assim, nao pode ter void, apenas public Cliente
+   
+ // um contrutor é so assim, nao pode ter void, apenas public Cliente
     public Cliente(){   
         System.out.println("criando um cliente usando um construtor sem paramentros");
         double aleatorio = Math.random();
@@ -22,6 +24,13 @@ public class Cliente{
         this.sexo = sexo;
         setRenda(renda);
         setNome(nome);;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
     public String getCpf() {
         return cpf;
@@ -68,6 +77,10 @@ public class Cliente{
     }
     public void setAnoNascimento(int anoNascimento) {
         this.anoNascimento = anoNascimento;
+    }
+
+    public String toString(){
+        return "Cliente: "+ nome + ".\n Cidade: "+ cidade +"\n";
     }
     
 }
